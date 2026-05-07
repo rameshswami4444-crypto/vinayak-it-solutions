@@ -1,0 +1,38 @@
+@import '../styles/theme.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-text antialiased;
+  font-family: var(--font-body), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-kicker {
+  font-family: var(--font-display), sans-serif;
+}
+
+* {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.4);
+  color: #f8fbff;
+}
+
