@@ -4,8 +4,12 @@ module.exports = {
     "./app/**/*.{js,jsx}",
     "./components/**/*.{js,jsx}",
   ],
+  
   theme: {
-    extend: {},
-  },
-  plugins: [],
+    extend: {
+      colors: {
+        "neon-cyan": "#22d3ee"
+      }
+    }
+  }
 };
