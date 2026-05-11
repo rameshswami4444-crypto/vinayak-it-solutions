@@ -59,7 +59,7 @@ body {
   }
 
   .gradient-orb {
-    @apply absolute rounded-full blur-3xl animate-drift;
+    @apply absolute rounded-full blur-3xl animate-pulse;
   }
 
   .noise-overlay {
@@ -67,4 +67,3 @@ body {
     background-size: 22px 22px;
     opacity: 0.18;
   }
-
