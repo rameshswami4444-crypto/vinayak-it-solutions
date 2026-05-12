@@ -1,20 +1,23 @@
-import { Space_Grotesk, Manrope } from 'next/font/google';
+import { Manrope, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 
-const spaceGrotesk = Space_Grotesk({
-  variable: '--font-display',
+const headingFont = Space_Grotesk({
+  variable: '--font-heading',
   subsets: ['latin'],
 });
 
-const manrope = Manrope({
+const bodyFont = Manrope({
   variable: '--font-body',
   subsets: ['latin'],
 });
 
 export const metadata = {
-  title: 'Vinayak IT Solutions',
-  description: 'Futuristic digital engineering, cloud acceleration, and premium software delivery.',
-  keywords: ['Vinayak IT Solutions', 'software company', 'web development', 'cloud', 'automation'],
+  title: {
+    default: 'Vinayak IT Solutions',
+    template: '%s | Vinayak IT Solutions',
+  },
+  description:
+    'Professional website development, marketing, and business support services for growing companies.',
   icons: {
     icon: '/favicon.svg',
   },
@@ -22,8 +25,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${spaceGrotesk.variable} ${manrope.variable}`}>
+    <html lang="en">
+      <body className={`${headingFont.variable} ${bodyFont.variable}`}>
         {children}
       </body>
     </html>

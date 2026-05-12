@@ -2,22 +2,22 @@
 
 import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
+import { whatsappContacts } from '@/lib/constants';
 
 export default function WhatsAppFloat() {
   return (
     <motion.a
-      href="https://wa.me/918209733894?text=Hi%20Vinayak%20IT%20Solutions"
+      href={whatsappContacts[0].href}
       target="_blank"
       rel="noreferrer"
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5, ease: 'easeOut', delay: 1.2 }}
-      whileHover={{ scale: 1.05, y: -2 }}
-      className="fixed bottom-5 right-5 z-50 inline-flex h-16 w-16 items-center justify-center rounded-full border border-emerald-400/30 bg-gradient-to-br from-emerald-400 to-emerald-500 text-white shadow-[0_12px_35px_rgba(16,185,129,0.45)]"
-      aria-label="Chat on WhatsApp"
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.35, delay: 0.4 }}
+      whileHover={{ y: -3, scale: 1.02 }}
+      className="fixed bottom-5 right-5 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500 text-white shadow-[0_18px_36px_rgba(16,185,129,0.35)] transition md:bottom-6 md:right-6"
+      aria-label="Chat with us on WhatsApp"
     >
-      <MessageCircle className="h-7 w-7" />
+      <MessageCircle className="h-6 w-6" />
     </motion.a>
   );
 }
-
