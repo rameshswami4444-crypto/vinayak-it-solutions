@@ -95,7 +95,7 @@ export default function ContactForm() {
                   href={contact.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="block rounded-3xl border border-white/10 bg-white/5 p-4 transition duration-200 hover:border-cyan-300/40 hover:bg-white/10"
+                  className="block rounded-3xl border border-white/10 bg-white/5 p-4 transition-all duration-300 hover:scale-[1.03] hover:border-cyan-300/40 hover:bg-white/10"
                 >
                   <p className="text-sm font-semibold text-cyan-200">WhatsApp {contact.name}</p>
                   <p className="mt-2 text-base text-white">{contact.phone}</p>
@@ -104,7 +104,7 @@ export default function ContactForm() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.06} className="surface-card p-6 sm:p-8">
+          <Reveal delay={0.08} className="surface-card p-6 sm:p-8">
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>

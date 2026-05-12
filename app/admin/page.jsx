@@ -46,7 +46,7 @@ export default async function AdminPage() {
           ) : null}
 
           {!error && enquiries.length > 0 ? (
-            <div className="mt-6 overflow-hidden rounded-3xl border border-white/10">
+            <div className="mt-6 overflow-hidden rounded-3xl border border-white/10 bg-slate-950/60">
               <div className="overflow-x-auto">
                 <table className="data-table min-w-full divide-y divide-white/10">
                   <thead>

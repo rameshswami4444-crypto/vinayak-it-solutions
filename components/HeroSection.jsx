@@ -18,7 +18,7 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.7, ease: 'easeInOut' }}
             className="max-w-3xl"
           >
             <span className="section-eyebrow">Vinayak IT Solutions</span>
@@ -29,7 +29,12 @@ export default function HeroSection() {
               We design websites, support marketing, and provide business services with a clear, professional process that works well on both desktop and mobile.
             </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <motion.div
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.08, ease: 'easeInOut' }}
+              className="mt-8 flex flex-col gap-3 sm:flex-row"
+            >
               <Link href="/contact" className="button-primary w-full sm:w-auto">
                 Get Free Consultation
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -37,22 +42,27 @@ export default function HeroSection() {
               <Link href="/services" className="button-secondary w-full sm:w-auto">
                 Explore Services
               </Link>
-            </div>
+            </motion.div>
 
-            <div className="mt-8 grid gap-3">
+            <motion.div
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.14, ease: 'easeInOut' }}
+              className="mt-8 grid gap-3"
+            >
               {highlights.map((item) => (
                 <div key={item} className="flex items-start gap-3 text-sm text-slate-300 sm:text-base">
                   <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-cyan-300" />
                   <span>{item}</span>
                 </div>
               ))}
-            </div>
+            </motion.div>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.75, delay: 0.1, ease: 'easeInOut' }}
             className="surface-card p-6 sm:p-8"
           >
             <div className="grid gap-4 sm:grid-cols-2">

@@ -27,7 +27,7 @@ export default function PortfolioGrid({
 
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
           {items.map((item, index) => (
-            <Reveal key={item.id} delay={index * 0.06} className="surface-card h-full p-6">
+            <Reveal key={item.id} delay={index * 0.06} className="surface-card h-full p-6 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03]">
               <span className="inline-flex rounded-full bg-indigo-500/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200">
                 {item.category}
               </span>

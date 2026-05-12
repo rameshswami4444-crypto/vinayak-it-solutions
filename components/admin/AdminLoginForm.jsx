@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
 
 export default function AdminLoginForm() {
   const router = useRouter();
@@ -44,7 +45,13 @@ export default function AdminLoginForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <motion.form
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: 'easeInOut' }}
+      onSubmit={handleSubmit}
+      className="space-y-5"
+    >
       <div>
         <label htmlFor="username" className="mb-2 block text-sm font-medium text-slate-200">
           Username
@@ -86,6 +93,6 @@ export default function AdminLoginForm() {
       <button type="submit" disabled={isSubmitting} className="button-primary w-full disabled:cursor-not-allowed disabled:opacity-70">
         {isSubmitting ? 'Signing in...' : 'Sign In'}
       </button>
-    </form>
+    </motion.form>
   );
 }

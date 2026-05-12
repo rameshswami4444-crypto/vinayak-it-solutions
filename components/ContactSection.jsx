@@ -33,7 +33,7 @@ export default function ContactSection() {
                 href={card.href}
                 target={card.href.startsWith('http') ? '_blank' : undefined}
                 rel={card.href.startsWith('http') ? 'noreferrer' : undefined}
-                className="surface-card block h-full p-6 transition duration-200 hover:-translate-y-1"
+                className="surface-card block h-full p-6 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03]"
               >
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200">{card.title}</p>
                 <p className="mt-4 break-words text-lg font-semibold text-white">{card.value}</p>

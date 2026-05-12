@@ -32,10 +32,10 @@ export default function Navbar() {
       <div className="container-shell pt-4">
         <div
           className={[
-            'flex items-center justify-between rounded-2xl border px-4 py-3 transition duration-200 sm:px-6',
+            'flex items-center justify-between rounded-2xl border px-4 py-3 transition-all duration-300 sm:px-6',
             isScrolled
-              ? 'border-white/10 bg-slate-950/90 shadow-[0_16px_40px_rgba(2,6,23,0.45)] backdrop-blur-xl'
-              : 'border-white/10 bg-slate-950/75 backdrop-blur',
+              ? 'border-white/10 bg-slate-950/90 shadow-[0_14px_34px_rgba(2,6,23,0.32)] backdrop-blur-md'
+              : 'border-white/10 bg-slate-950/72 backdrop-blur-sm',
           ].join(' ')}
         >
           <Link href="/" className="flex items-center gap-3">
@@ -57,10 +57,10 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   className={[
-                    'rounded-full px-4 py-2 text-sm font-medium transition duration-200',
+                    'rounded-full px-4 py-2 text-sm font-medium transition-all duration-300',
                     active
                       ? 'bg-indigo-500 text-white'
-                      : 'text-slate-300 hover:bg-white/5 hover:text-white',
+                      : 'text-slate-300 hover:scale-[1.03] hover:bg-white/5 hover:text-white',
                   ].join(' ')}
                 >
                   {link.label}
@@ -93,10 +93,10 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
             className="container-shell md:hidden"
           >
-            <div className="mt-3 overflow-hidden rounded-3xl border border-white/10 bg-slate-950/95 p-4 shadow-[0_20px_50px_rgba(2,6,23,0.45)] backdrop-blur-xl">
+            <div className="mt-3 overflow-hidden rounded-3xl border border-white/10 bg-slate-950/95 p-4 shadow-[0_18px_38px_rgba(2,6,23,0.32)] backdrop-blur-md">
               <nav className="flex flex-col gap-2">
                 {navLinks.map((link) => {
                   const active = isActivePath(pathname, link.href);
@@ -106,10 +106,10 @@ export default function Navbar() {
                       key={link.href}
                       href={link.href}
                       className={[
-                        'rounded-2xl px-4 py-3 text-sm font-medium transition duration-200',
+                        'rounded-2xl px-4 py-3 text-sm font-medium transition-all duration-300',
                         active
                           ? 'bg-indigo-500 text-white'
-                          : 'text-slate-300 hover:bg-white/5 hover:text-white',
+                          : 'text-slate-300 hover:scale-[1.03] hover:bg-white/5 hover:text-white',
                       ].join(' ')}
                     >
                       {link.label}
